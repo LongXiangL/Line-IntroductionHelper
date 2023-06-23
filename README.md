@@ -1,13 +1,13 @@
 # 我的Line-bot求職小幫手
 
-![Index page about LINE bot](.public/截圖%202023-06-23%20下午7.07.33.png)
+![Index page about LINE bot](./public/截圖%202023-06-23%20下午7.07.33.png)
 
 ## 介紹
 這是一個用Javascript寫的LINEbot小幫手，使用Railway部署網址，可供使用者利用line自動回覆求職資訊。
 
 ### 功能
 掃描 QR code加好友
-![Index page about LINE qr code](.public/截圖%202023-06-23%20下午7.12.57.png)
+![Index page about LINE qr code](./public/截圖%202023-06-23%20下午7.12.57.png)
 
 ### 事前準備
 1.一個Line帳號
@@ -36,4 +36,8 @@
 
 Have fun! 新手也能打造的Javascript微型專案!
 https://ithelp.ithome.com.tw/articles/10307812
+
+## 注意
+Railway僅提供5美元的免費流量
+請不要把我的流量玩壞～
 
