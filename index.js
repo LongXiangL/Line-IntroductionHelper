@@ -1,16 +1,21 @@
-const express = require("express")
-const app = express()
-const linebot = require("linebot")//引用linebot SDK
-//辨識line channel的資訊
-const bot = linebot({
-  channelId: processing.env.channelId,
-  channelSecret: processing.env.channelSecret,
-  channelAccessToken: processing.env.channelAccessToken,
-})
 
-const linebotParser = bot.parser()
+// 建立express伺服器
+const express = require("express");
+const app = express();
+
+// 引用linebot SDK
+let linebot = require("linebot");
+
+// 用於辨識Line Channel的資訊
+let bot = linebot({
+  channelId: process.env.channelId,
+  channelSecret: process.env.channelSecret,
+  channelAccessToken: process.env.channelAccessToken,
+});
+
+const linebotParser = bot.parser();
 //當有人傳完訊息給bot時
-bot.on("message",function(event){
+bot.on("message", function (event) {
   // event.message.text是使用者傳給bot的訊息
   const introRegex = /你|誰|介紹|you|yourself|hello|你好|hi/gi;
   const resumeRegex = /resume|履歷|cv/gi;
@@ -36,10 +41,10 @@ bot.on("message",function(event){
 });
 //送出帶有line-bot需要資訊的POST請求
 
+// 送出帶有line-bot需要資訊的POST請求
+app.post("/", linebotParser);
 
-app.post("/", linebotParser) 
-
-
-app.listen(process.env.PORT||3000, () => {
-  console.log(`Example server star`);
+// 啟動express server
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Express server start");
 });
