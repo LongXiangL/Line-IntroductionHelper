@@ -27,7 +27,7 @@ bot.on("message", function (event) {
     );
   } else if (resumeRegex.test(userText)) {
     event.reply(
-      "以下是我目前的最新履歷以及檔案，正在尋找後端工程師職位，歡迎隨時與我聯繫 \n\n履歷:https://drive.google.com/file/d/1YLP6L4UyvBv7nDiJWwY1Nuq7SL4GUpTm/view?usp=sharing \n\nLinkedIn頁面: https://www.linkedin.com/in/%E9%BE%8D%E9%A9%A4-%E5%91%82-00042626a/\n\ngithub作品頁面:https://github.com/LongXiangL "
+      "以下是我目前的最新履歷以及檔案，正在尋找後端工程師職位，歡迎隨時與我聯繫 \n\n履歷:https://www.yourator.co/r/c7583edd-6d8f-4441-95a2-ac0c330985ca \n\nLinkedIn頁面: https://www.linkedin.com/in/%E9%BE%8D%E9%A9%A4-%E5%91%82-00042626a/\n\ngithub作品頁面:https://github.com/LongXiangL "
     );
   } else if (blogRegex.test(userText)) {
     event.reply(
